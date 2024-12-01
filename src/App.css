@@ -28,6 +28,59 @@
   color: #61dafb;
 }
 
+/* src/App.css */
+
+.dynamic-form {
+  margin: 20px;
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: lightgrey;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.progress {
+  height: 100%;
+  transition: width 0.4s ease;
+  background-color: green;
+  border-radius: 5px;
+}
+/* src/App.css */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #eaeaea;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+button {
+  cursor: pointer;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
