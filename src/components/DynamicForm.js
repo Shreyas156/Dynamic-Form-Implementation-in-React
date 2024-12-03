@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
@@ -127,9 +126,16 @@ const DynamicForm = () => {
   const handleSelection = (e) => {
     const formType = e.target.value;
     setSelectedForm(formType);
-    setFormData(apiResponses[formType].fields);
-    setFormValues({});
-    setProgress(0);
+
+    // Add null/undefined checks here
+    if (apiResponses[formType] && apiResponses[formType].fields) {
+      setFormData(apiResponses[formType].fields);
+      setFormValues({});
+      setProgress(0);
+    } else {
+      console.error('Invalid form type or missing data');
+      setFormData([]); // Clear form data in case of invalid form type
+    }
   };
 
   const handleInputChange = (e, field) => {
